@@ -10,17 +10,21 @@
 
 def sum_of_n(n)
   # your code here
-  result = []
-  if n >= 0
-    ary = (0..n).to_a
-  else
-    ary = (n..0).to_a.reverse
+  # result = []
+  # if n >= 0
+  #   ary = (0..n).to_a
+  # else
+  #   ary = (n..0).to_a.reverse
+  # end
+  # ary.each_with_index do |_numb, index|
+  #   somme = 0
+  #   result << somme += ary[0..index].sum + somme
+  # end
+  # result
+  sum = 0
+  (n.negative? ? 0.downto(n) : 0.upto(n)).map do |number|
+    sum += number
   end
-  ary.each_with_index do |_numb, index|
-    somme = 0
-    result << somme += ary[0..index].sum + somme
-  end
-  result
 end
 
 p sum_of_n(3)
