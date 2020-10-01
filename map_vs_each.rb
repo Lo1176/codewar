@@ -1,12 +1,21 @@
-# initiate the array menu
+# frozen_string_literal: true
+
 menu = %w[Calzone Magarita Regina Fromages]
 
-def my_pizza(pizza)
+# with each
+def my_pizza_each(pizza)
   ary = []
   pizza.each do |pizz|
-    ary << "I love my pizza #{pizz}"
+    ary << "J'aime ma pizza #{pizz}"
   end
   ary
 end
 
-puts my_pizza(menu)
+# with map
+puts my_pizza_each(menu)
+
+def my_pizza_map(pizza)
+  pizza.map { |pizz| "I love my pizza #{pizz}" }
+end
+
+puts my_pizza_map(menu)
