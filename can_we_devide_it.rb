@@ -8,7 +8,7 @@ end
 
 # with .all?
 def devide_by_all?(number, *args)
-  args.all? { |divisor| number % divisor == 0 }
+  args.all? { |divisor| (number % divisor).zero? }
 end
 
 # test
